@@ -262,7 +262,7 @@ const RiscVPagingMode = enum(u64) {
     sv39 = 0,
     sv48 = 1,
     sv57 = 2,
-    default = @intFromEnum(sv48),
+    default = @intFromEnum(.sv48),
 };
 
 pub const PagingMode = switch (builtin.cpu.arch) {
