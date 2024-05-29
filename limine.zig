@@ -249,20 +249,17 @@ pub const TerminalRequest = extern struct {
 const X86PagingMode = enum(u64) {
     four_level = 0,
     five_level = 1,
-    default = @intFromEnum(X86PagingMode.four_level),
 };
 
 const AArch64PagingMode = enum(u64) {
     four_level = 0,
     five_level = 1,
-    default = @intFromEnum(AArch64PagingMode.four_level),
 };
 
 const RiscVPagingMode = enum(u64) {
     sv39 = 0,
     sv48 = 1,
     sv57 = 2,
-    default = @intFromEnum(RiscVPagingMode.sv48),
 };
 
 pub const PagingMode = switch (builtin.cpu.arch) {
